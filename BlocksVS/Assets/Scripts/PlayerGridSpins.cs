@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerGridSpins : MonoBehaviour 
 {
 	public float SpinSpeed;
-	bool running = false;
+	public static bool running = false;
 	public void SpinGridsRight()
 	{
 		if(running)
