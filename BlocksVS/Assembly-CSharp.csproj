@@ -46,12 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AmmoExample.cs" />
-     <Compile Include="Assets\Scripts\ActivityColor.cs" />
-     <Compile Include="Assets\Scripts\PlayerGrid.cs" />
-     <Compile Include="Assets\Scripts\PlayerGridSpins.cs" />
-     <Compile Include="Assets\Scripts\PlayerInput.cs" />
-     <Compile Include="Assets\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Player\ActivityColor.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerGrid.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerGridDimensions.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerGridSpins.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\PlayerWeapon\AmmoExample.cs" />
+     <Compile Include="Assets\Scripts\PlayerWeapon\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

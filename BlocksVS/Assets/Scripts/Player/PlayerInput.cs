@@ -12,9 +12,12 @@ public class PlayerInput : MonoBehaviour
     private Vector3 clickDownPos;
     private Vector3 releasePos;
     private bool occupied;
-    //90 degrees is up, 180 is left, 270 is down, 0||360 is right.
+    private bool hitPlayerGrid;
+
+
 	void Start()
 	{
+        hitPlayerGrid = false;
 		whichWeapon = 0;
         occupied = false;
         clickDownPos = new Vector3();
@@ -51,8 +54,10 @@ public class PlayerInput : MonoBehaviour
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        hitPlayerGrid = false;
         if (Physics.Raycast(ray, out hit, 100.0f, PlayerGridLayer))
         {
+            hitPlayerGrid = true;
             Vector3 weaponPos = hit.collider.gameObject.transform.position;
             PlayerGrid playerGrid = hit.collider.gameObject.GetComponent<PlayerGrid>();
             if (playerGrid.CurrentlyStationed != null)
@@ -71,6 +76,8 @@ public class PlayerInput : MonoBehaviour
 
     private void PlayerOnGridRelease(Vector3 release, Vector3 click, GameObject spawnedWeapon)
     {
+        if (!hitPlayerGrid)
+            return;
         Quaternion weaponRot;
         float differenceX = release.x - click.x;
         float differenceY = release.y - click.y;
