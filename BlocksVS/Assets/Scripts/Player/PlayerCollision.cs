@@ -13,8 +13,9 @@ public class PlayerCollision : MonoBehaviour
         switch(other.gameObject.tag)
         {
             case "Enemy":
-                Debug.Log("Destroyed an enemy " + gameObject.name);
+                //Debug.Log("Destroyed an enemy " + gameObject.name);
                 Destroy(other.gameObject);
+                EnemySpawner.NumEnemies--;
                 break;
             default:
                 break;

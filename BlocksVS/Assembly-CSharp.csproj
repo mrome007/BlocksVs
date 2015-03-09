@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\PlayerWeapon\AmmoExample.cs" />
      <Compile Include="Assets\Scripts\PlayerWeapon\Weapon.cs" />
+     <None Include="Assets\Resources\Levels\TestLevel.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
